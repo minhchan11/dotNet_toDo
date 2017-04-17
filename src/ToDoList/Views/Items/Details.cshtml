@@ -1,13 +1,11 @@
 ﻿@model ToDoList.Models.Item
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>To Do List -Details</title>
-</head>
-<body>
+@{
+    ViewData["Title"] = "Item - Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
     <h2>Details</h2>
-    <hr/>
-    @Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)
-    <p>@Html.ActionLink("Back to List", "Index")</p>
-    </body>
-</html>
+    <p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</p>
+    <p>@Html.DisplayNameFor(model => model.CategoryId) : @Html.DisplayFor(model => model.CategoryId)</p>
+
+    <p>@Html.ActionLink("Edit", "Edit", new { id = Model.ItemId }) | @Html.ActionLink("Back to List", "Index")</p>

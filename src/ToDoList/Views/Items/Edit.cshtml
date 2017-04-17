@@ -1,25 +1,22 @@
 ﻿@model ToDoList.Models.Item
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>To Do List - Edit</title>
-</head>
-<body>
-    <h2>Edit</h2>
-    <hr />
-    <h4>Edit this Task: @Html.DisplayFor(model => model.Description)</h4>
+@{
+    ViewData["Title"] = "Item - Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Edit</h2>
+<hr />
+<h4>Edit this item: @Html.DisplayFor(model => model.Description)</h4>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ItemId)
 
-    @using (Html.BeginForm())
-    {
-        @Html.HiddenFor(model => model.ItemId)
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
 
-        @Html.LabelFor(model => model.Description)
-        @Html.EditorFor(model => model.Description)
+    @Html.LabelFor(model => model.CategoryId)
+    @Html.DropDownList("CategoryId")
 
-        <input type="submit" value="Save" />
-
-    }
-
-    <p>@Html.ActionLink("Back to list", "Index")</p>
- </body>
-</html>
+    <input type="submit" value="Save" class="btn btn-default" />
+}
+@Html.ActionLink("Back to List", "Index")
