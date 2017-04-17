@@ -20,8 +20,9 @@ namespace ToDoList.Controllers
         public IActionResult Details(int id)
         {
             var thisItem = db.Items.FirstOrDefault(items => items.ItemId == id);
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name");
-            return View(thisItem);
+            var thisCategory = db.Categories.FirstOrDefault(categories => categories.CategoryId == thisItem.CategoryId);
+            var dictionary = new Dictionary<string, Object> { { "item", thisItem }, { "category", thisCategory } };
+            return View(dictionary);
         }
 
         public IActionResult Create()
@@ -41,6 +42,7 @@ namespace ToDoList.Controllers
         public IActionResult Edit(int id)
         {
             var thisItem = db.Items.FirstOrDefault(items => items.ItemId == id);
+            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name");
             return View(thisItem);
         }
 
