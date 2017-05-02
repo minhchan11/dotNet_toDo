@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ToDoList", "src\ToDoList\ToDoList.xproj", "{49711023-6E3F-4F9A-9CC9-3643CEE7E3E3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{CBED1051-42AA-4AC8-BED0-1B60D04663F8}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ToDoList.Test", "ToDoList.Test\ToDoList.Test.xproj", "{447360B3-1869-4486-95E1-78F3C67D80E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,16 @@ Global
 		{49711023-6E3F-4F9A-9CC9-3643CEE7E3E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49711023-6E3F-4F9A-9CC9-3643CEE7E3E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49711023-6E3F-4F9A-9CC9-3643CEE7E3E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{447360B3-1869-4486-95E1-78F3C67D80E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{447360B3-1869-4486-95E1-78F3C67D80E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{447360B3-1869-4486-95E1-78F3C67D80E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{447360B3-1869-4486-95E1-78F3C67D80E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{49711023-6E3F-4F9A-9CC9-3643CEE7E3E3} = {AD3F159E-C040-4B6D-AEF6-1742234CB2B9}
+		{447360B3-1869-4486-95E1-78F3C67D80E1} = {CBED1051-42AA-4AC8-BED0-1B60D04663F8}
 	EndGlobalSection
 EndGlobal
